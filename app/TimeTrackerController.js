@@ -11,7 +11,7 @@ timeTrackerApp.controller('TimeTrackerController',
         };
 
         $scope.redirectToReport = function(){
-        	window.location = '/report.html';
+        	window.location = 'https://github.com/jedben99/time-tracker/app/report.html';
         }
 
         $scope.stopTimer = function() {
