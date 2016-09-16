@@ -7,16 +7,15 @@
     <title>Time Tracker App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body ng-controller='TimeTrackerController' ng-init="stopTimer()">
     <h1>Time Report</h1>
     <h2>You spent {{elapsedTime | number : fractionSize}} hours on this page</h2>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers/TimeTrackerController.js"></script>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="TimeTrackerController.js"></script>
 </body>
 
 </html>
