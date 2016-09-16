@@ -1,8 +1,9 @@
 'use strict';
 
 
-timeTrackerApp.controller('TimeTrackerController',
-    function TimeTrackerController($scope) {
+timeTrackerApp.controller('TimeTrackerController', ['$scope','$window',
+    function TimeTrackerController($scope, $window) {
+
         $scope.startTimer = function() {
             var setStartTime = new Date();
             setStartTime = setStartTime.getTime();
@@ -11,7 +12,7 @@ timeTrackerApp.controller('TimeTrackerController',
         };
 
         $scope.redirectToReport = function(){
-            $window.location.href = '/report.html'
+            $window.location.href = 'report.html';
         }
 
         $scope.stopTimer = function() {
@@ -24,4 +25,4 @@ timeTrackerApp.controller('TimeTrackerController',
         };
 
     }
-);
+]);
