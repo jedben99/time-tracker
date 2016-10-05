@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="timeTrackerApp" lang="en" ng-app="myApp" class="no-js">
+<html ng-app="timeTrackerApp" lang="en" class="no-js">
 
 <head>
+    <base href="/"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Time Tracker App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/css/app.css" />
 </head>
 
 <body ng-controller='TimeTrackerController'>
-    <h1>Time Tracker</h1>
-    <div>
-        <button ng-click="startTimer()">Start Timer</button>
-        <button ng-click="redirectToReport()">Stop Timer</button>
+    <div id="mainContainer">
+        <h1>Time Tracker</h1>
+        <div>
+            <button ng-click="startTimer()">Start Timer</button>
+            <button ng-click="stopTimer()">Stop Timer</button>
+        </div>
+        <div>
+            <button ng-click="redirectToReport('report')">Display Time Spent Here</button>
+        </div>
+        <ng-view></ng-view>
     </div>
-    <script src="angular.js"></script>
-    <script src="app.js"></script>
-    <script src="TimeTrackerController.js"></script>
+    
+    <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controllers/TimeTrackerController.js"></script>
 </body>
+
 </html>

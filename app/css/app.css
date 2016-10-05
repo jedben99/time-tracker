@@ -1,0 +1,10 @@
+#mainContainer{
+	text-align: center;
+}
+div {
+	margin: 20px;
+}
+button{
+	font-weight: bold;
+	padding: 20px;
+}
